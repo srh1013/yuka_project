@@ -1,0 +1,14 @@
+/*font-family: 'Bangers', cursive;
+font-family: 'Sonsie One', cursive; ===> Logo
+font-family: 'Patrick Hand SC', cursive; ===> Titres de la NavBar
+font-family: 'Patrick Hand', cursive; ===> Texte */
+
+
+* {
+  /* border: 1px dotted rgb(255, 72, 0); */
+}
+.App {
+
+  background-color: #282c34;
+
+}
