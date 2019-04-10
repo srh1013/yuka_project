@@ -1,0 +1,4 @@
+.text,
+.text::-webkit-input-placeholder {
+	font-size: 2vw;
+}
