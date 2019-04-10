@@ -5,6 +5,7 @@ class Body extends Component {
 	render() {
 		return (
 			<div>
+        <History />
 				<SearchBar />
 			</div>
 		);
