@@ -1,55 +1,109 @@
 import React, { Component } from "react";
-import "./MainArea.css";
+// import "./MainArea.css";
 import SuperPower from "./SuperPower.jsx";
+// import AccordionPowerBIS from "./AccordionPowerBIS.jsx";
+import AccordionPower from "./AccordionPower.jsx";
+
+import {
+	CardDeck,
+	CardBody,
+	Card,
+	CardImg,
+	Button,
+	Collapse
+} from "reactstrap";
 
 class LegendPower extends Component {
 	constructor(props) {
 		super(props);
+		this.toggle = this.toggle.bind(this);
 		this.state = {
 			power: [
 				{
 					power: "Super pouvoir",
 					noteNutriscore: "A",
-					image: "",
+					image:
+						"data:image/png;base64,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",
 					description:
 						"Excellent ce produit est plein de supers pouvoirs, continue comme ça !!!"
 				},
 				{
 					power: "Pouvoir lilili",
 					noteNutriscore: "B",
-					image: "",
+					image:
+						"data:image/png;base64,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",
 					description: "Ce produit a de super pouvoir, bon "
 				},
 				{
 					power: "Pouvoir lalala",
 					noteNutriscore: "C",
-					image: "",
+					image:
+						"data:image/png;base64,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",
 					description: "Ce produit a de super pouvoir, bon "
 				},
 				{
 					power: "Pouvoir dangereux",
 					noteNutriscore: "D",
-					image: "",
+					image:
+						"data:image/png;base64,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",
 					description:
 						"Ce produit a de mauvais pouvoir, cherche encore il existe des produits similaires avec de meilleur pouvoir"
 				},
 				{
 					power: "Pouvoir maléfique",
 					noteNutriscore: "E",
-					image: "",
+					image:
+						"data:image/png;base64,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",
 					description:
 						"Attention, ce produit a des pouvoirs dangereux. Vérifie auprès de tes parents avant de l'ajouter au panier !!!"
 				}
 			]
 		};
 	}
+	toggle() {
+		this.setState(state => ({ collapse: !state.collapse }));
+	}
 
 	render() {
 		return (
 			<div>
-				{this.state.map((power, index) => {
-					return;
+				<h1 className="pl-3">Découvre les supers pouvoirs de tes produits</h1>
+				<CardDeck>
+					{this.state.power.map((powerList, index) => {
+						return <SuperPower {...powerList} key={index} />;
+					})}
+				</CardDeck>
+
+				{this.state.power.map((powerList, index) => {
+					return <AccordionPower {...powerList} key={index} />;
 				})}
+
+				{/* <div>
+					{this.state.powerList.map((powerList, index) => {
+						return <AccordionPowerBIS {...powerList} key={index} />;
+					})}
+				</div> */}
+
+				{/* {this.state.powerList.map((powerList, index) => {
+					return (
+						<div>
+							<h5> {this.state.powerList.power} </h5>
+							<CardImg src={this.state.powerList.image} alt="Power" />
+							<Button
+								color="primary"
+								onClick={this.toggle}
+								style={{ marginBottom: "1rem" }}
+							>
+								+
+							</Button>
+							<Collapse isOpen={this.state.collapse}>
+								<Card>
+									<CardBody>{this.state.powerList.description}</CardBody>
+								</Card>
+							</Collapse>
+						</div>
+					);
+				})} */}
 			</div>
 		);
 	}
