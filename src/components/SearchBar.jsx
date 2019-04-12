@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-import { Button } from "reactstrap";
+import React from "react";
+import { InputGroup, Input, Button } from "reactstrap";
 import styles from "./SearchBar.module.css";
-
-import { InputGroup, Input } from "reactstrap";
 
 const SearchBar = props => {
 	return (
@@ -13,9 +11,7 @@ const SearchBar = props => {
 					style={{ textAlign: "center" }}
 					placeholder="ENTRE TON CODE BARRE ICI"
 				/>
-				<Button color="secondary" size="sm">
-					VALIDER
-				</Button>
+				<Button color="secondary" size="sm" href="/product">VALIDER</Button>
 			</InputGroup>
 		</div>
 	);
