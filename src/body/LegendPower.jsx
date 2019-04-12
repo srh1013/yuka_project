@@ -4,19 +4,11 @@ import SuperPower from "./SuperPower.jsx";
 // import AccordionPowerBIS from "./AccordionPowerBIS.jsx";
 import AccordionPower from "./AccordionPower.jsx";
 
-import {
-	CardDeck,
-	CardBody,
-	Card,
-	CardImg,
-	Button,
-	Collapse
-} from "reactstrap";
+import { CardDeck } from "reactstrap";
 
 class LegendPower extends Component {
 	constructor(props) {
 		super(props);
-		this.toggle = this.toggle.bind(this);
 		this.state = {
 			power: [
 				{
@@ -60,9 +52,6 @@ class LegendPower extends Component {
 			]
 		};
 	}
-	toggle() {
-		this.setState(state => ({ collapse: !state.collapse }));
-	}
 
 	render() {
 		return (
@@ -74,8 +63,8 @@ class LegendPower extends Component {
 					})}
 				</CardDeck>
 
-				{this.state.power.map((powerList, index) => {
-					return <AccordionPower {...powerList} key={index} />;
+				{this.state.power.map((powerAccordion, index) => {
+					return <AccordionPower {...powerAccordion} key={index} />;
 				})}
 
 				{/* <div>
