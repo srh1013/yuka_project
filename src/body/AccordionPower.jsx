@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Collapse, Button, CardBody, Card, CardImg } from "reactstrap";
+import {
+	Collapse,
+	Button,
+	CardBody,
+	Card,
+	CardImg,
+	Row,
+	Col
+} from "reactstrap";
 
 class AccordionPower extends Component {
 	constructor(props) {
@@ -15,15 +23,26 @@ class AccordionPower extends Component {
 	render() {
 		return (
 			<div>
-				<h5> {this.props.power} </h5>
-				<CardImg src={this.props.image} alt="Power" />
-				<Button
-					color="primary"
-					onClick={this.toggle}
-					style={{ marginBottom: "1rem" }}
-				>
-					+
-				</Button>
+				<Row className="row justify-content-start d-flex align-items-center bg-transparent">
+					{/* <Col md="1"> */}
+					<CardImg
+						src={this.props.image}
+						alt="Power"
+						style={{ height: 50, width: 50 }}
+					/>
+					{/* </Col>
+					<Col md="2"> */}
+					<h5> {this.props.power} </h5>
+					{/* </Col> */}
+					<Button
+						color="primary"
+						onClick={this.toggle}
+						style={{ marginBottom: "1rem" }}
+					>
+						+
+					</Button>
+				</Row>
+
 				<Collapse isOpen={this.state.collapse}>
 					<Card>
 						<CardBody>{this.props.description}</CardBody>
@@ -33,26 +52,5 @@ class AccordionPower extends Component {
 		);
 	}
 }
-
-// const AccordionPower = props => {
-// 	return (
-// 		<>
-// 			<h5> {props.power} </h5>
-// 			<CardImg src={props.image} alt="Power" />
-// 			<Button
-// 				color="primary"
-// 				onClick={props.toggle}
-// 				style={{ marginBottom: "1rem" }}
-// 			>
-// 				+
-// 			</Button>
-// 			<Collapse isOpen={props.collapse}>
-// 				<Card>
-// 					<CardBody>{props.description}</CardBody>
-// 				</Card>
-// 			</Collapse>
-// 		</>
-// 	);
-// };
 
 export default AccordionPower;
