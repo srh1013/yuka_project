@@ -15,7 +15,7 @@ class History extends Component {
 					Scan vite le code barre pour les découvrir !
 				</p>
 				<div className={styles.superHero}>
-					<img src={SuperHeroRed_phone} />
+					<img src={SuperHeroRed_phone} alt="" />
 				</div>
 			</div>
 		);

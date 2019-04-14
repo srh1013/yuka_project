@@ -5,7 +5,6 @@
 		grid-template-rows: 10px repeat(3, auto) 10px;
 		grid-gap: 10px;
 		color: rgb(80, 79, 79);
-		background-color: whitesmoke;
 		text-align: center;
 	}
 	.superHero {
@@ -42,7 +41,6 @@
 		grid-template-rows: 10px repeat(2, auto) 10px;
 		grid-gap: 10px;
 		color: rgb(80, 79, 79);
-		background-color: whitesmoke;
 		text-align: center;
 	}
 	.superHero {

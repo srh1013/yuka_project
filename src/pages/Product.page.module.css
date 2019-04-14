@@ -1,0 +1,18 @@
+.Bg {
+  background-image: url(../images/comicsBackground.jpg);
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.CardStyle {
+
+  border-radius: 20px 20px 20px 20px !important;
+  -moz-border-radius: 20px 20px 20px 20px !important;
+  -webkit-border-radius: 20px 20px 20px 20px !important;
+  
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5) !important;
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5) !important;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5) !important;
+}

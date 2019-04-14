@@ -4,7 +4,7 @@ import styles from "./SearchBar.module.css";
 
 const SearchBar = props => {
 	return (
-		<div class="w-80 p-3">
+		<div className="w-80 p-3" style={{backgroundColor:"rgb(247, 211, 6)"}}>
 			<InputGroup>
 				<Input
 					className={styles.text}
