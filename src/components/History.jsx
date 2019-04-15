@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+
 import styles from "./History.module.css";
 import SuperHeroRed_phone from "../images/SuperHeroRed_phone.png";
 
@@ -14,7 +15,7 @@ class History extends Component {
 					Scan vite le code barre pour les découvrir !
 				</p>
 				<div className={styles.superHero}>
-					<img src={SuperHeroRed_phone} />
+					<img src={SuperHeroRed_phone} alt="" />
 				</div>
 			</div>
 		);
