@@ -22,8 +22,8 @@ class Product extends Component {
 	}
 	render() {
 		return (
-			<div className={`${styles.Bg} no-gutters pb-4`}>
-				<Jumbotron className={`${styles.CardStyle} no-gutters m-2 m-md-5 p-3`}>
+			<div className={`${styles.Bg} no-gutters p-2 p-sm-4`}>
+				<Jumbotron className={`${styles.CardStyle} no-gutters`}>
 					<Row className="m-1 m-md-5">
 						<Col xs={{ size:12, order:2}} sm={{ size:4, order:1}} className="d-flex justify-content-center">
 							<img src="https://via.placeholder.com/150x100" alt=""/>
