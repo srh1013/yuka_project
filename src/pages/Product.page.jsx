@@ -8,7 +8,6 @@ import {
 	Row,
 	Col
 } from "reactstrap";
-import NavbarTitle from "../components/NavbarTitle";
 import styles from "./Product.page.module.css";
 
 class Product extends Component {
@@ -24,8 +23,6 @@ class Product extends Component {
 	render() {
 		return (
 			<div className={`${styles.Bg} no-gutters pb-4`}>
-				<NavbarTitle />
-
 				<Jumbotron className={`${styles.CardStyle} no-gutters m-2 m-md-5 p-3`}>
 					<Row className="m-1 m-md-5">
 						<Col xs={{ size:12, order:2}} sm={{ size:4, order:1}} className="d-flex justify-content-center">
