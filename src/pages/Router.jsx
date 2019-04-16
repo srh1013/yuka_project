@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Home from "./Home.page";
 import Error from "./Error.page";
-import Product from "./Product.page";
+import ProductPage from "./Product.page";
 
 class Router extends Component {
 	render() {
@@ -14,7 +14,7 @@ class Router extends Component {
 					<Switch>
 						<Route path="/" exact component={Home} />
 						<Route path="/home" component={Home} />
-						<Route path="/product" component={Product} />
+						<Route path="/product/:codeBar" component={ProductPage} />
 						<Route component={Error} />
 					</Switch>
 				</div>

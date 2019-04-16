@@ -11,7 +11,7 @@ const SearchBar = props => {
 					style={{ textAlign: "center" }}
 					placeholder="ENTRE TON CODE BARRE ICI"
 				/>
-				<Button color="secondary" size="sm" href="/product">VALIDER</Button>
+				<Button color="secondary" size="sm" href="/product" >VALIDER</Button>
 			</InputGroup>
 		</div>
 	);
