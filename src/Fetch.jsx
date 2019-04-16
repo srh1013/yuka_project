@@ -11,12 +11,12 @@ export default class Fetch extends React.Component{
 			isError: false,
 			result: null
 		}
-		debugger;
+		// debugger;
 	}
 
 		componentDidMount(){
 			const { requestUrl } = this.props;
-			debugger;
+			// debugger;
 			this.setState({
 				isLoading: true,
 				isSuccess: false,
@@ -26,12 +26,12 @@ export default class Fetch extends React.Component{
 			Axios
 			.get(requestUrl)
 			.then(result =>{
-				debugger;
+				// debugger;
 				this.setState({
 					isLoading: false,
 					isSuccess: true,
 					isError: false,
-					result: result
+					result: result.data
 				})
 			})
 			.catch(error =>
@@ -47,7 +47,7 @@ export default class Fetch extends React.Component{
 		render(){
 			const { renderError, renderLoading, renderSuccess } = this.props;
 			const { isError, isLoading, isSuccess, result } = this.state;
-			debugger;
+			// debugger;
 			if (isError){
 				return renderError(result);
 			}

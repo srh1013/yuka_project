@@ -8,12 +8,15 @@ import Product from '../components/Product';
 export default function ProductPage({ match }){
 	return (
 		<Fetch 
-			requestUrl={`https://fr.openfoodfacts.org/api/v0/produit/${match.params.codeBar}`} 
+			requestUrl={`https://fr.openfoodfacts.org/api/v0/produit/${match.params.barcode}`} 
 			renderError={() => "Oups.... une erreur est survenue"}
 			renderLoading={() => "Chargement du produit en cours ...."} 
-			renderSuccess={(product) => {
+			renderSuccess={({product}) => {
 				debugger;
-				return <Product title={product.title} imageUrl={product.imageUrl} />
+				return <Product 
+				packaging={product.packaging} 
+				name={product.product_name_fr} 
+				imageUrl={product.image_front_small_url} />
 		}} />
 	)
 }
