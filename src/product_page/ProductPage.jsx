@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import DisplayProduct from "./DisplayProduct";
 import axios from "axios";
 import { InputGroup, Input, Button } from "reactstrap";
-import styles from "../body/SearchBar.module.css";
+
 
 class ApiTest extends Component {
 	constructor(props) {
@@ -87,7 +87,6 @@ class ApiTest extends Component {
 					<InputGroup>
 						{/* Barcode input*/}
 						<Input
-							className={styles.text}
 							style={{ textAlign: "center" }}
 							placeholder="ENTRE TON CODE BARRE ICI"
 							onChange={this.handle.bind(this)}
