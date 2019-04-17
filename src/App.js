@@ -1,18 +1,21 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import NavbarTitle from "./header/NavbarTitle";
+import Router from './pages/Router';
+import NavbarTitle from './components/NavbarTitle';
 import LegendPower from "./body/LegendPower.jsx";
 
+
 class App extends Component {
-	render() {
-		return (
-			<div className="App">
-				<NavbarTitle />
-				<LegendPower />
-			</div>
-		);
-	}
+  render() {
+    return (
+      <div className="App">
+        <NavbarTitle />
+        <Router />
+        <LegendPower />
+      </div>
+    );
+  }
 }
 
 export default App;

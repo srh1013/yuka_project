@@ -1,0 +1,71 @@
+@media (max-width: 768px) {
+	.main {
+		display: grid;
+		grid-template-columns: 10px 1fr 10px;
+		grid-template-rows: 10px repeat(3, auto) 10px;
+		grid-gap: 10px;
+		color: rgb(80, 79, 79);
+		text-align: center;
+	}
+	.superHero {
+		grid-column: 2;
+		grid-row: 4;
+	}
+	.superHero img {
+		max-width: 100%;
+	}
+	.title {
+		grid-column: 2;
+		grid-row: 2;
+		font-family: "Patrick Hand SC", cursive;
+		font-size: 3.5vw;
+		font-weight: bold;
+		align-self: flex-start;
+	}
+	.notice {
+		grid-column: 2;
+		grid-row: 3;
+		font-family: "Patrick Hand", cursive;
+		font-size: 3.5vw;
+		background-color: rgba(182, 136, 37, 0.2);
+		border-radius: 30px;
+		padding: 5px;
+		align-self: flex-start;
+	}
+}
+
+@media (min-width: 769px) {
+	.main {
+		display: grid;
+		grid-template-columns: 10px repeat(2, 1fr) 10px;
+		grid-template-rows: 10px repeat(2, auto) 10px;
+		grid-gap: 10px;
+		color: rgb(80, 79, 79);
+		text-align: center;
+	}
+	.superHero {
+		grid-column: 2;
+		grid-row: 2 / 4;
+	}
+	.superHero img {
+		max-width: 100%;
+	}
+	.title {
+		grid-column: 3 / 4;
+		grid-row: 2;
+		font-family: "Patrick Hand SC", cursive;
+		font-size: 3.5vw;
+		font-weight: bold;
+		align-self: flex-end;
+	}
+	.notice {
+		grid-column: 3 / 4;
+		grid-row: 3;
+		font-family: "Patrick Hand", cursive;
+		font-size: 3.5vw;
+		background-color: rgba(182, 136, 37, 0.2);
+		border-radius: 30px;
+		padding: 5px;
+		align-self: flex-start;
+	}
+}
