@@ -23,27 +23,25 @@ class AccordionPower extends Component {
 
 	render() {
 		return (
-			<div className=" d-none d-md-block d-sm-block d-block d-lg-none m-4">
-				{/* <Row
-					className="row justify-content-start d-flex align-items-center"
-					style={{ border: "warning" }}
-				> */}
+			<div className=" d-none d-md-block d-sm-block d-block d-lg-none p-4">
 				<Row className="d-flex align-items-center">
 					<Col sm="3">
 						<CardImg
 							src={this.props.image}
 							alt="Power"
 							style={{ height: 100, width: 100 }}
+							className="d-flex m-auto"
 						/>
 					</Col>
 					<Col sm="4">
 						<h5 className="m-3"> {this.props.power} </h5>
 					</Col>
-					<Col sm="5" classeName="d-flex justify-content-center p-0 m-0">
+					<Col sm="5">
 						<Button
 							color="primary"
 							onClick={this.toggle}
-							style={{ marginBottom: "1rem" }}
+							className="d-flex m-auto"
+							// style={{ marginBottom: "1rem" }}
 						>
 							Plus d'infos
 						</Button>
