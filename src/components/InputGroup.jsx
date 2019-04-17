@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import SearchInput from "./SearchInput";
 import SearchButton from "./SearchButton";
@@ -21,7 +21,7 @@ export default class InputGroup extends React.Component {
   render() {
     const { inputValue } = this.state;
     return (
-      <div style={homePageStyle}>
+      <div style={homePageStyle} className="w-80 p-3" style={{backgroundColor:"rgb(247, 211, 6)"}}>
       
         <SearchInput onChange={inputValue => this.setState({ inputValue })} />
         <SearchButton barcode={inputValue} />
@@ -32,15 +32,3 @@ export default class InputGroup extends React.Component {
   }
 }
 
-// --------------------------------------------
-// VERSION avec hooks
-// --------------------------------------------
-// export default function HomePage() {
-//   const [inputValue, setInputValue] = useState("");
-//   return (
-//     <div style={homePageStyle}>
-//       <SearchButton filter={inputValue} />
-//       <SearchInput onChange={inputValue => setInputValue(inputValue)} />
-//     </div>
-//   );
-// }

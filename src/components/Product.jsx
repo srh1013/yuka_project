@@ -24,8 +24,6 @@ export default class Product extends React.Component {
 		return (
 			
 			<div className={`${styles.Bg} no-gutters p-2 p-sm-4`}>
-			<h1>{this.props.packaging}</h1>
-			<h1> {this.props.title}</h1>
 				<Jumbotron className={`${styles.CardStyle} no-gutters`}>
 					<Row className="m-1 m-md-5">
 						<Col xs={{ size:12, order:2}} sm={{ size:4, order:1}} className="d-flex justify-content-center">
@@ -46,15 +44,17 @@ export default class Product extends React.Component {
               block
               className="m-2 m-md-5 p-1"
 						>
-							Plus d'informations sur ce produit
+							Plus d'informations sur ce produit (pour 100g)
 						</Button>
 						<Collapse isOpen={this.state.collapse} style={{width:"100%"}}>
 							<Card>
 								<CardBody className="py-0" >
 									<Row className="d-flex flex-column text-center">
-										<Col className="p-3">Calories</Col>
-										<Col className="p-3 border-top ">Sucres</Col>
-										<Col className="p-3 border-top ">Lipides</Col>
+										<Col className="p-3">Calories : {`${this.props.energyV}${this.props.energyU}`}</Col>
+										<Col className="p-3 border-top "> Matières grasses : {`${this.props.fatV}${this.props.fatU}`}</Col>
+										<Col className="p-3 border-top ">Graisses saturées : {`${this.props.saturedFatV}${this.props.saturedFatU}`}</Col>
+										<Col className="p-3 border-top">Sucre : {`${this.props.sugars_value}${this.props.sugars_unit}`}</Col>
+										<Col className="p-3 border-top ">Sel : {`${this.props.saltV}${this.props.saltU}`}</Col>
 									</Row>
 								</CardBody>
 							</Card>
