@@ -23,34 +23,35 @@ class AccordionPower extends Component {
 
 	render() {
 		return (
-			<div className=" d-none d-md-block d-sm-block d-block d-lg-none ">
-				<Row
+			<div className=" d-none d-md-block d-sm-block d-block d-lg-none m-4">
+				{/* <Row
 					className="row justify-content-start d-flex align-items-center"
 					style={{ border: "warning" }}
-				>
-					{/* <Col md="1"> */}
-					<div>
+				> */}
+				<Row className="d-flex align-items-center">
+					<Col sm="3">
 						<CardImg
 							src={this.props.image}
 							alt="Power"
-							style={{ height: 50, width: 50 }}
-							className="d-lg-none d-xl-block"
+							style={{ height: 100, width: 100 }}
 						/>
-						{/* </Col>
-						<Col md="2"> */}
-						<h5> {this.props.power} </h5>
-						{/* </Col> */}
+					</Col>
+					<Col sm="4">
+						<h5 className="m-3"> {this.props.power} </h5>
+					</Col>
+					<Col sm="5" classeName="d-flex justify-content-center p-0 m-0">
 						<Button
 							color="primary"
 							onClick={this.toggle}
 							style={{ marginBottom: "1rem" }}
 						>
-							+
+							Plus d'infos
 						</Button>
-					</div>
+					</Col>
 				</Row>
-				<Row>
-					<Collapse isOpen={this.state.collapse}>
+				{/* </Row> */}
+				<Row className="m-4">
+					<Collapse isOpen={this.state.collapse} className="m-4">
 						<div>{this.props.description}</div>
 						{/* <Card>
 						<CardBody>{this.props.description}</CardBody>
