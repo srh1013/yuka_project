@@ -4,6 +4,7 @@ import Api from '../Api'
 import History from '../components/History';
 import SearchBar from '../components/SearchBar';
 import LegendPower from "../components/LegendPower";
+import InputGroup from "../sami/InputGroup";
 
 
 class Home extends Component {
@@ -11,9 +12,10 @@ class Home extends Component {
     return (
       <div>
         <History />
-				<SearchBar />
+        <InputGroup />
+				{/* <SearchBar /> */}
         <LegendPower />
-        <Api />
+        {/* <Api /> */}
       </div>
     );
   }
