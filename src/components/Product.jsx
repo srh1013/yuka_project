@@ -33,7 +33,7 @@ export default class Product extends React.Component {
 						</Col>
 						<Col xs={{ size: 12, order:1}} sm={{ size: 7, offset: 1, order:2}} >
 							<h2 className="text-center text-sm-left">{this.props.name}</h2>
-							<h3 className="text-center text-sm-left">Marque</h3>
+							<h3 className="text-center text-sm-left">{this.props.brand}</h3>
 						</Col>
 					</Row>
           <Row><img block className="mx-auto my-5 " src="https://via.placeholder.com/250x250/green" alt="" style={{borderRadius: "100%"}} /></Row>

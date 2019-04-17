@@ -16,6 +16,7 @@ export default function ProductPage({ match }){
 				return <Product 
 				packaging={product.packaging} 
 				name={product.product_name_fr} 
+				brand={product.brands}
 				imageUrl={product.image_front_small_url} />
 		}} />
 	)
