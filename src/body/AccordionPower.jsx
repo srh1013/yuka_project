@@ -23,9 +23,9 @@ class AccordionPower extends Component {
 
 	render() {
 		return (
-			<div className=" row justify-content-start offset-1 col-md-7 ">
+			<div className=" d-none d-md-block d-sm-block d-block d-lg-none ">
 				<Row
-					className="row justify-content-start d-flex align-items-center d-lg-none d-xl-block"
+					className="row justify-content-start d-flex align-items-center"
 					style={{ border: "warning" }}
 				>
 					{/* <Col md="1"> */}
