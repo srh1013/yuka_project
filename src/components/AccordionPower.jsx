@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./AccordionPower.module.css";
 import {
 	Collapse,
 	Button,
@@ -41,19 +40,14 @@ class AccordionPower extends Component {
 							color="primary"
 							onClick={this.toggle}
 							className="d-flex m-auto"
-							// style={{ marginBottom: "1rem" }}
 						>
 							Plus d'infos
 						</Button>
 					</Col>
 				</Row>
-				{/* </Row> */}
 				<Row className="m-4">
 					<Collapse isOpen={this.state.collapse} className="m-4">
 						<div>{this.props.description}</div>
-						{/* <Card>
-						<CardBody>{this.props.description}</CardBody>
-					</Card> */}
 					</Collapse>
 				</Row>
 			</div>

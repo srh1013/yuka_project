@@ -3,7 +3,6 @@ import "./App.css";
 
 import Router from './pages/Router';
 import NavbarTitle from './components/NavbarTitle';
-import LegendPower from "./body/LegendPower.jsx";
 
 
 class App extends Component {
@@ -12,7 +11,6 @@ class App extends Component {
       <div className="App">
         <NavbarTitle />
         <Router />
-        <LegendPower />
       </div>
     );
   }

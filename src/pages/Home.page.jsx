@@ -3,6 +3,7 @@ import Api from '../Api'
 
 import History from '../components/History';
 import SearchBar from '../components/SearchBar';
+import LegendPower from "../components/LegendPower";
 
 
 class Home extends Component {
@@ -11,6 +12,7 @@ class Home extends Component {
       <div>
         <History />
 				<SearchBar />
+        <LegendPower />
         <Api />
       </div>
     );

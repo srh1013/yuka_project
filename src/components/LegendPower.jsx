@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-// import "./MainArea.css";
-import SuperPower from "./SuperPower.jsx";
-// import AccordionPowerBIS from "./AccordionPowerBIS.jsx";
-import AccordionPower from "./AccordionPower.jsx";
 
+import SuperPower from "./SuperPower";
+import AccordionPower from "./AccordionPower";
 import { CardDeck } from "reactstrap";
 
 class LegendPower extends Component {
